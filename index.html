@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Background Remover</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Image Background Remover</h1>
+            <p>Remove image backgrounds instantly using remove.bg API</p>
+        </div>
+
+        <div class="main-content">
+            <!-- API Key Section -->
+            <div class="section api-section">
+                <h2>API Configuration</h2>
+                <div class="form-group">
+                    <label for="apiKey">Remove.bg API Key</label>
+                    <input 
+                        type="password" 
+                        id="apiKey" 
+                        placeholder="Enter your remove.bg API key"
+                        class="input-field"
+                    >
+                    <small>Get your free API key from <a href="https://www.remove.bg/api" target="_blank">remove.bg</a></small>
+                </div>
+                <button id="saveApiKey" class="btn btn-primary">Save API Key</button>
+                <div id="apiStatus" class="status-message"></div>
+            </div>
+
+            <!-- Image Upload Section -->
+            <div class="section upload-section">
+                <h2>Upload Image</h2>
+                <div class="upload-area" id="uploadArea">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    <p>Drag and drop your image here</p>
+                    <p class="small-text">or click to browse</p>
+                    <input type="file" id="imageInput" accept="image/*" hidden>
+                </div>
+                <div id="uploadStatus" class="status-message"></div>
+            </div>
+
+            <!-- Preview Section -->
+            <div class="section preview-section" id="previewSection" style="display: none;">
+                <h2>Preview</h2>
+                <div class="preview-container">
+                    <div class="preview-item">
+                        <h3>Original</h3>
+                        <img id="originalImage" alt="Original image">
+                    </div>
+                    <div class="preview-item">
+                        <h3>Background Removed</h3>
+                        <img id="processedImage" alt="Processed image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Processing Status -->
+            <div id="processingStatus" class="processing-status" style="display: none;">
+                <div class="spinner"></div>
+                <p>Processing your image...</p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="actions" id="actionsSection" style="display: none;">
+                <button id="downloadBtn" class="btn btn-success">Download</button>
+                <button id="resetBtn" class="btn btn-secondary">Reset</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Made with care | Powered by remove.bg</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 # Image Background Remover
 
 A simple, clean web application for removing image backgrounds using the remove.bg API. No unnecessary features - just straightforward background removal.
-Test Link: https://github.io/AbdulNafeh7/Bg-remover/
+Test Link: https://abdulnafeh7.github.io/Bg-remover/
 ## Features
 
 - Simple and clean user interface for quick background removal
